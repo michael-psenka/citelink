@@ -1,5 +1,8 @@
 # compiler directories
 .vscode/
+*.csproj
+bin/
+obj/
 # Prerequisites
 *.d
 
