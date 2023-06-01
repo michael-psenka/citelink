@@ -1,19 +1,23 @@
-# global variables
-$exePath = "C:\Program Files\CiteLinkChanger"
+# Windows installation script. Will save program files and add to path,
+# so you can run citelink and citelink mypdf.pdf from either cmd or
+# powershell.
+
+# If you want a different name for the command, change $commandName.
+
+# NOTE: if you run this script again (when $destination has already
+# been added to PATH), it will remove $destination from PATH. Simply run the script
+# again and $destination will be re-added to PATH.
+
+$destination = "C:\Program Files\CiteLinkChanger"
 $commandName = "citelink"
-$commandPath = "$exePath\cite-link-changer.exe"
-# create command
-$commandScript = "Start-Process -FilePath $commandPath"
-$commandScriptBlock = [ScriptBlock]::Create($commandScript)
-
-# copy module files
-New-Item -ItemType Directory -Path $exePath -Force
-
-Copy-Item -Path ".\cite_link_changer_dotnet\*" -Destination "$exePath" -Force
-
-# created command files
-New-Item -ItemType File -Path "$env:USERPROFILE\Documents\WindowsPowerShell\Modules\$commandName\$commandName.psm1" -Force
-Set-Content -Path "$env:USERPROFILE\Documents\WindowsPowerShell\Modules\$commandName\$commandName.psm1" -Value $commandScriptBlock
-
-# add command to profile
-Add-Content $Profile "`nfunction citelink { & '$commandPath' }"
+# make new directory for program files
+if (!(Test-Path $destination)) {
+    New-Item -ItemType Directory -Path $destination
+}
+# copy from repo to new directory
+Copy-Item -Path ".\cite_link_changer_dotnet\*" -Destination $destination -Force
+# add to PATH
+$env:Path += ";$destination"
+[Environment]::SetEnvironmentVariable("Path", $env:Path, [System.EnvironmentVariableTarget]::Machine)
+# create command by creating batch file simply calling the executable
+New-Item -ItemType File -Path "$env:ProgramFiles\CiteLinkChanger\$commandName.bat" -Value "@echo off`r`n`"$env:ProgramFiles\CiteLinkChanger\cite-link-changer.exe`" %*"
