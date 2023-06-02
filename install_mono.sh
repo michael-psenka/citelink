@@ -15,7 +15,10 @@ if ! [ -x "$(command -v mono)" ]; then
   echo 'Warning: mono is not installed.' >&2
   echo 'The citelink install will continue, but please install mono before using the script!' >&2
 fi
-
+# make target directory if it doesn't exist
+if [ ! -d "$install_folder" ]; then
+  mkdir -p "$install_folder"
+fi
 # Copy the contents of ./cite_link_changer_mono into an installation folder
 sudo cp -r ./cite_link_changer_mono "$install_folder"
 
