@@ -5,7 +5,7 @@ Cite Link Changer (citelink) is a simple command-line tool that takes academic p
 ## Demo
 
 <p align="center">
-  <img src="https://media.giphy.com/media/3o7aD9LW0nPIJhKU6w/giphy.gif" alt="animated" />
+  <img src="https://media.giphy.com/media/ycxxEan3ii6bCsY8Ys/giphy.gif" alt="animated" />
 </p>
 
 ## Installation
