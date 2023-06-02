@@ -20,7 +20,7 @@ Clone the repository locally, then depending on your OS:
 ### Mac/Linux/Bash
 
 1. [Install mono](https://www.mono-project.com/download/stable/). Make sure you can run mono in your terminal by running `mono --version`.
-2. Navigate to this repository's location, then run `sudo ./install_mono.sh`.
+2. In your terminal, navigate to this repository's location, then run `sudo ./install_mono.sh`.
 
 ### Additional installation options
 
