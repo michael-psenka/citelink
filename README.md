@@ -1,6 +1,6 @@
 # Citelink
 
-Cite Link Changer (citelink) is a simple command-line tool that takes academic papers and turns the bibliography citation links into direct web links to the referenced paper. Since academic papers can be packed with outside references, this can speed up background reading tremendously.
+*Cite Link Changer* (`citelink`) is a simple command-line tool that takes academic papers and turns the bibliography citation links into direct web links to the referenced paper. Since academic papers can be packed with outside references, this can speed up background reading tremendously.
 
 ## Demo
 
