@@ -18,8 +18,7 @@ Clone the repository locally, then depending on your OS:
 2. Navigate to this repository's location, then run `.\install_windows.ps1`.
 
 ### Mac/Linux
-
-1. <a href="https://www.mono-project.com/download/stable/" target="_blank">Install mono</a>. Make sure you can run mono in your terminal by running `mono --version`.
+1. <a href="https://www.mono-project.com/download/stable/" target="_blank">Install mono</a>. Make sure you can run mono in your terminal by running `mono --version`; note this may need a restart.
 2. In your terminal, navigate to this repository's location, then run `sudo ./install_mono.sh`.
 
 ### Additional installation options
