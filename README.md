@@ -33,7 +33,7 @@ To convert a PDF, navigate to its directory in your terminal and run the followi
 ```sh
 citelink
 ```
-This will take the most recently modified PDF in the working directory, and convert all citation links in the PDF that point to the bibliography into URLs that take you straight to the paper (Google search `→` click first link).
+This will take the most recently modified PDF in the working directory and convert all citation links in the PDF that point to the bibliography into URLs that take you straight to the paper (Google search `→` click first link).
 
 If you want to convert a different PDF in the working directory, say `mypaper.pdf`, you can pass in a PDF name as an argument:
 
