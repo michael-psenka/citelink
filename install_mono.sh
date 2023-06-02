@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 command_name="citelink"
 install_folder="/usr/local/bin/cite_link_changer"
@@ -20,7 +20,7 @@ fi
 sudo cp -r ./cite_link_changer_mono "$install_folder"
 
 # Create the command-line command "citelink" that runs "mono /path/to/install/cite_link_changer.exe" with the given argument afterwards.
-echo '#!/bin/bash' | sudo tee "/usr/local/bin/$command_name" > /dev/null
+echo "#!/usr/bin/env sh" | sudo tee "/usr/local/bin/$command_name" > /dev/null
 echo "mono $install_folder/cite_link_changer.exe \"\$@\"" | sudo tee -a "/usr/local/bin/$command_name" > /dev/null
 
 # Make it executable
