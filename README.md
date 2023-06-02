@@ -17,7 +17,7 @@ Clone the repository locally, then depending on your OS:
 1. Launch Powershell as an admin.
 2. Navigate to this repository's location, then run `.\install_windows.ps1`.
 
-### Mac/Linux/Bash
+### Mac/Linux
 
 1. [Install mono](https://www.mono-project.com/download/stable/). Make sure you can run mono in your terminal by running `mono --version`.
 2. In your terminal, navigate to this repository's location, then run `sudo ./install_mono.sh`.
