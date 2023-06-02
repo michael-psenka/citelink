@@ -41,5 +41,9 @@ If you want to convert a different PDF in the working directory, say `mypaper.pd
 citelink mypaper.pdf
 ```
 
+## Editing the code
+
+If you would like to tinker with the main program, I've included both the C# source code and .csproj descriptor for the .NET project. You can build/compile with either `dotnet` or Mono's `mcs`, as long as you've installed the only outside dependency, `itextsharp --version=5.5.13.3`.
+
 Enjoy!
 
