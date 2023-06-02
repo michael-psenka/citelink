@@ -1,6 +1,6 @@
 # Citelink
 
-Cite Link Changer (citelink) is a simple command-line tool that takes academic papers and turns the bibliography citation links into direct web links to the referenced paper. Since academic papers can be loaded with outside references, this can speed up background reading tremendously.
+Cite Link Changer (citelink) is a simple command-line tool that takes academic papers and turns the bibliography citation links into direct web links to the referenced paper. Since academic papers can be packed with outside references, this can speed up background reading tremendously.
 
 ## Demo
 
@@ -20,7 +20,7 @@ Clone the repository locally, then depending on your OS:
 ### Mac/Linux/Bash
 
 1. [Install mono](https://www.mono-project.com/download/stable/). Make sure you can run mono in your terminal by running `mono --version`.
-2. Navigate to this repository's location, then run `./install_mono.sh`.
+2. Navigate to this repository's location, then run `sudo ./install_mono.sh`.
 
 ### Additional installation options
 
