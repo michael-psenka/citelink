@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 command_name="citelink"
 install_folder="/usr/local/bin/cite_link_changer"
