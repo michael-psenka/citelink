@@ -20,7 +20,7 @@ if [ ! -d "$install_folder" ]; then
   mkdir -p "$install_folder"
 fi
 # Copy the contents of ./cite_link_changer_mono into an installation folder
-sudo cp -r ./cite_link_changer_mono "$install_folder"
+sudo cp -r ./cite_link_changer_mono/* "$install_folder"
 
 # Create the command-line command "citelink" that runs "mono /path/to/install/cite_link_changer.exe" with the given argument afterwards.
 echo "#!/usr/bin/env sh" | sudo tee "/usr/local/bin/$command_name" > /dev/null
