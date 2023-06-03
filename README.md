@@ -40,6 +40,8 @@ If you want to convert a different PDF in the working directory, say `mypaper.pd
 citelink mypaper.pdf
 ```
 
+## Updating
+Running the appropriate install script again will simply copy over the contents of either `cite_link_changer_dotnet` or `cite_link_changer_mono` (whichever is appropriate), so simply clone the repository again and run the appropriate installation script. If you changed the command name or install directory, make sure you change back to the same one!
 ## Editing the code
 
 If you would like to tinker with the main program, I've included both the C# source code and .csproj descriptor for the .NET project. You can build/compile with either `dotnet` or Mono's `mcs`, as long as you've installed the only outside dependency, `itextsharp --version=5.5.13.3`.
