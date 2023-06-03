@@ -98,6 +98,7 @@ class Program
             for (int j = 0; j < annots.Size; j++)
             {
                 PdfDictionary annotation = annots.GetAsDict(j);
+
                 // get action dictionary
                 PdfDictionary actionDictionary = annotation.GetAsDict(PdfName.A);
                 // make sure there is an action dictionary before querying it
@@ -191,7 +192,8 @@ class Program
                         // with our constructed URI
                         actionDictionary.Put(PdfName.S, PdfName.URI);
                         actionDictionary.Put(PdfName.URI, new PdfString(textNewUrl));
-
+                        // clear out old destination object
+                        actionDictionary.Remove(PdfName.D);
                     }
                 }
             }
