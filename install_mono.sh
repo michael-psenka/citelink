@@ -22,6 +22,13 @@ fi
 # Copy the contents of ./cite_link_changer_mono into an installation folder
 sudo cp -r ./cite_link_changer_mono/* "$install_folder"
 
+# if command already exists, then we only want to update files
+# Check if the command exists and exit if it does
+if command -v "$command_name" >/dev/null 2>&1; then
+    echo "$command_name command found, update complete!"
+    exit
+fi
+
 # Create the command-line command "citelink" that runs "mono /path/to/install/cite_link_changer.exe" with the given argument afterwards.
 echo "#!/usr/bin/env sh" | sudo tee "/usr/local/bin/$command_name" > /dev/null
 echo "mono $install_folder/cite_link_changer.exe \"\$@\"" | sudo tee -a "/usr/local/bin/$command_name" > /dev/null

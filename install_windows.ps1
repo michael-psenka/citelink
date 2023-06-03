@@ -16,6 +16,11 @@ if (!(Test-Path $destination)) {
 }
 # copy from repo to new directory
 Copy-Item -Path ".\cite_link_changer_dotnet\*" -Destination $destination -Force
+# if citelink is already installed, we only want to update files as we did above, and exit
+if (Get-Command $commandName -ErrorAction SilentlyContinue) {
+    Write-Host "$commandName command found, update complete!"
+    exit
+}
 # add to PATH
 $env:Path += ";$destination"
 [Environment]::SetEnvironmentVariable("Path", $env:Path, [System.EnvironmentVariableTarget]::Machine)
