@@ -173,12 +173,10 @@ class Program
 
 
                         // ****** FORMAT LINK: we google search the paper and click the first result
-                        // remove \r and \n characters to put into URL search
-                        // 
-                        string textCleaned = textCutoff.Replace("\r", "").Replace("\n", "");
-                        // remove Google's reserved characters
-                        textCleaned = textCleaned.Replace("(", "").Replace(")", "").Replace("“", "").Replace("\"", "");
-                        textCleaned = textCleaned.Replace("_", "").Replace("*", "").Replace("-", "").Replace("|", "").Replace("..", "");
+                        // remove any characters that are not a-z, A-Z, 0-9, space, or .
+                        string textCleaned = Regex.Replace(textCutoff, @"[^a-zA-Z0-9 .]", "");
+                        // remove Google's reserved characters not covered by above regex
+                        textCleaned = textCleaned.Replace("..", "");
                         // replace any space character with "+"
                         textCleaned = textCleaned.Replace(" ", "+");
 
